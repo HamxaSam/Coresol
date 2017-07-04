@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    app:layout_collapseParallaxMultiplier="1.0">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="0dp"
+        android:layout_height="234dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_constraintLeft_creator="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.904">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="160dp"
+            app:expandedTitleMarginStart="40dp"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                tools:layout_editor_absoluteY="138dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"/>
+
+            <io.vov.vitamio.widget.VideoView
+                android:id="@+id/videoView"
+                android:layout_width="0dp"
+                android:layout_height="249dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.466"
+               />
+
+            <Button
+                android:id="@+id/btn_play"
+                android:layout_width="88dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@android:drawable/ic_media_play"
+                app:layout_constraintBottom_toBottomOf="@+id/videoView"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/videoView"
+                tools:ignore="HardcodedText"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:text="Movie title"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toBottomOf="@+id/appbar"
+        tools:ignore="HardcodedText"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/textView_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 1 line for movie description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title"
+        tools:ignore="HardcodedText"
+        app:layout_constraintHorizontal_bias="0.503"/>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="-17dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:drawable/ic_media_previous"
+        app:layout_constraintBottom_toBottomOf="@+id/button_play"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        tools:layout_editor_absoluteX="42dp"
+        app:layout_constraintTop_toTopOf="@+id/button_play"
+        android:layout_marginTop="8dp"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <Button
+        android:id="@+id/button_play"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@android:drawable/ic_media_pause"
+        tools:ignore="HardcodedText,RtlHardcoded"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_forw"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_back"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView_des"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <Button
+        android:id="@+id/btn_forw"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:background="@android:drawable/ic_media_next"
+        app:layout_constraintLeft_toRightOf="@+id/button_play"
+        tools:layout_editor_absoluteY="324dp"/>
+
+
+</android.support.constraint.ConstraintLayout>
+
+
+

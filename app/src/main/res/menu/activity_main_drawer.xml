@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/Home"
+            android:icon="@drawable/ic_home"
+            android:title="Home"
+            tools:ignore="HardcodedText"/>
+
+        <item
+            android:id="@+id/Genre"
+            android:icon="@drawable/catagory"
+            android:title="Genre"
+            tools:ignore="HardcodedText"/>
+
+        <item
+            android:id="@+id/Countries"
+            android:icon="@drawable/flag"
+            android:title="Countires"
+            tools:ignore="HardcodedText"/>
+        <item
+            android:id="@+id/Movies"
+            android:icon="@drawable/movie"
+            android:title="Movies"
+            tools:ignore="HardcodedText"/>
+        <item
+            android:id="@+id/List"
+            android:icon="@android:drawable/ic_menu_sort_alphabetically"
+            android:title="A-Z List"
+            tools:ignore="HardcodedText"/>
+        <item
+            android:id="@+id/Requested"
+            android:icon="@drawable/request"
+            android:title="Requested"
+            tools:ignore="HardcodedText"/>
+
+        <item
+            android:title="More"
+            tools:ignore="HardcodedText">
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/share"
+                        android:icon="@android:drawable/ic_menu_share"
+                        android:title="Share"/>
+                    <item
+                        android:id="@+id/send"
+                        android:icon="@android:drawable/ic_dialog_email"
+                        android:title="Send"/>
+                </group>
+            </menu>
+        </item>
+
+    </group>
+</menu>

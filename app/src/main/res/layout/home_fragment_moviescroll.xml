@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent">
+
+    <com.github.siyamed.shapeimageview.RoundedImageView
+        android:id="@+id/imageView_MovieScroll"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/five"
+        android:scaleType="fitXY"
+        android:layout_marginLeft="7dp"
+        android:elevation="5dp"
+        android:layout_marginTop="3dp"
+        android:src="@drawable/four"
+        app:siRadius="1dp"
+        app:siBorderWidth="1dp"
+        app:siSquare="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="RtlHardcoded,UnusedAttribute"/>
+</android.support.constraint.ConstraintLayout>
